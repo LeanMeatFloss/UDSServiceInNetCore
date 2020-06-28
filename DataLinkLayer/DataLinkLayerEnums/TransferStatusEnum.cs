@@ -1,4 +1,4 @@
-namespace DataLinkLayerEnums
+namespace DataLinkLayer.DataLinkLayerEnums
 {
     /// <summary>
     /// This enum is based on ISO_11898-1 8.2.2

@@ -1,6 +1,5 @@
 {
     "editor.formatOnPaste": true,
-    "editor.defaultFormatter": "ms-dotnettools.csharp",
     "cSpell.words": [
         "LSDU"
     ]

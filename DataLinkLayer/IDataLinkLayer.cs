@@ -9,5 +9,6 @@ namespace DataLinkLayer
         event ConfirmDelegate ConfirmEvent;
         event IndicationDelegate IndicationEvent;
         event RequestDelegate RequestEvent;
+        void PollingTask();
     }
 }

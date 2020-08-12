@@ -29,9 +29,27 @@ namespace StackServerProvider
 
             services.AddCors(options =>
             {
-                options.AddPolicy("MyPolicy", builder => builder.AllowAnyOrigin());
+                options.AddPolicy("MyPolicy",
+                builder =>
+                builder
+                .SetIsOriginAllowed(origin => true)
+                .AllowCredentials()
+                .AllowAnyHeader()
+                .AllowAnyMethod());
             });
-            services.AddControllers();
+            services.AddControllers()
+            .AddJsonOptions(options =>
+            {
+                options.JsonSerializerOptions.IgnoreNullValues = true;
+            });
+            services.AddSignalR(options =>
+            {
+                options.EnableDetailedErrors = true;
+            }).AddJsonProtocol(ele =>
+            {
+                ele.PayloadSerializerOptions.IgnoreNullValues = true;
+            });
+            //.AddJsonOptions(opts => opts.JsonSerializerOptions.Converters.Add(new System.Text.Json.Serialization.JsonStringEnumConverter()));
             //services.AddMvc(option => option.EnableEndpointRouting = false);
             // services.AddMvc().AddJsonOptions(opt =>
             //          {
@@ -53,13 +71,15 @@ namespace StackServerProvider
 
             app.UseAuthorization();
 
-
             app.UseCors("MyPolicy");//.AllowCredentials());
+
 
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
+                endpoints.MapHub<Hubs.ViewsHub>("/hub");
             });
+            app.UseCors("MyPolicy");//.AllowCredentials());
 
         }
     }

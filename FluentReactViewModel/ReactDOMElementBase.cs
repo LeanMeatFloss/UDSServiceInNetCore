@@ -5,6 +5,7 @@ namespace FluentReactViewModel
 {
     public abstract class ReactDOMElementBase
     {
-        public List<ReactDOMElementBase> ChildrenList { get; } = new List<ReactDOMElementBase>();
+        public object[] ChildrenList { get; set; }
+        public Dictionary<string, string> CssDict { get; set; }
     }
 }

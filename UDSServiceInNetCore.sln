@@ -9,8 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataLinkLayer", "DataLinkLa
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataLinkLayer.Tests", "DataLinkLayer.Tests\DataLinkLayer.Tests.csproj", "{9301E0E9-5747-4C76-892E-713B14DC511B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReactViewModel", "ReactViewModel\ReactViewModel.csproj", "{7E696B9D-7420-4F5F-B54B-168913F69981}"
-EndProject
+
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FluentReactViewModel", "FluentReactViewModel\FluentReactViewModel.csproj", "{30E1328C-5ECD-44BF-95D3-7ED257B5EC07}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StackServerProvider", "StackServerProvider\StackServerProvider.csproj", "{D74EA74A-3AE5-4A1C-8C93-DBA10170CEF3}"

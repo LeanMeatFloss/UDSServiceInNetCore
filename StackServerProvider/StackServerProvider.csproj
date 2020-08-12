@@ -6,6 +6,6 @@
     <PackageReference Include="Microsoft.AspNetCore.Cors" Version="*" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ReactViewModel\ReactViewModel.csproj" />
+    <ProjectReference Include="..\FluentReactViewModel\FluentReactViewModel.csproj" />
   </ItemGroup>
 </Project>
